@@ -1,0 +1,23 @@
+{
+  "name": "react-typescipt-antd",
+  "version": "1.0.0",
+  "description": "antd组件开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beat-the-buzzer/react-typescipt-antd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.165"
+  }
+}
