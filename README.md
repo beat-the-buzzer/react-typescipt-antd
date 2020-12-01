@@ -35,4 +35,9 @@ tsc --init ## 生成了一个tsconfig.json文件
 
 React Dom / React Native
 
+```shell
+npm intall -g create-react-app
+create-react-app [my-app] --template typescript --use-npm
+```
+
 ### Antd组件的开发
