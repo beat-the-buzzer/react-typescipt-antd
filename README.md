@@ -23,6 +23,16 @@ tsc --init ## 生成了一个tsconfig.json文件
 
 ### 泛型介绍
 
+ - 泛型
+
+ - 泛型接口
+
+ - 泛型类
+
+ - 泛型约束
+
 ### ReactDOM的使用
+
+React Dom / React Native
 
 ### Antd组件的开发
