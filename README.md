@@ -40,4 +40,22 @@ npm intall -g create-react-app
 create-react-app [my-app] --template typescript --use-npm
 ```
 
+[ReactDom文档](https://zh-hans.reactjs.org/docs/react-dom.html)
+
+1. render函数的渲染机制
+
+Stack => Fiber 
+
+更新频率
+
+[https://github.com/claudiopro/react-fiber-vs-stack-demo](https://github.com/claudiopro/react-fiber-vs-stack-demo)
+
+ - render()
+
+ - componentWillUnmount()
+
+ - findDOMNode()
+
+ - createPortal()
+
 ### Antd组件的开发
