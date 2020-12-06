@@ -59,3 +59,53 @@ Stack => Fiber
  - createPortal()
 
 ### Antd组件的开发
+
+1. [rmc-feedback](https://react-component.github.io/m-feedback/)
+
+所有能够响应触屏操作的元素在触屏后都应该有一个视觉上的反馈，这就是为什么web应用不够“原生”
+
+```jsx
+/* eslint-disable no-console */
+/* tslint:disable:no-console */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TouchFeedback from 'rmc-feedback';
+import './simple.less';
+
+const TouchFeedbackDemo = () => (
+  <TouchFeedback activeClassName="active" activeStyle={{ color: 'red' }}>
+    <div className="normal" style={{
+      backgroundColor: 'yellow',
+    }}
+    onClick={() => console.log('click div')}>click to active</div>
+  </TouchFeedback>
+);
+
+ReactDOM.render(
+  <div style={{ marginBottom: 12 }}>
+    <TouchFeedbackDemo />
+  </div>,
+  document.getElementById('__react-content'),
+);
+```
+
+2. [rmc-dialog](https://react-component.github.io/m-dialog/)
+
+3. [classnames](https://github.com/JedWatson/classnames)
+
+```js
+classNames('foo', 'bar'); // => 'foo bar'
+classNames('foo', { bar: true }); // => 'foo bar'
+classNames({ 'foo-bar': true }); // => 'foo-bar'
+classNames({ 'foo-bar': false }); // => ''
+classNames({ foo: true }, { bar: true }); // => 'foo bar'
+classNames({ foo: true, bar: true }); // => 'foo bar'
+
+// lots of arguments of various types
+classNames('foo', { bar: true, duck: false }, 'baz', { quux: true }); // => 'foo bar baz quux'
+
+// other falsy values are just ignored
+classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1'
+```
+
+### Alert弹窗
