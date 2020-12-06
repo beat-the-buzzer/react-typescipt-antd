@@ -109,3 +109,47 @@ classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1
 ```
 
 ### Alert弹窗
+
+1. 可以引用antd-mobile内部的一些文件
+
+2. PropType.d.ts也可以引用，进行类型检测
+
+3. 解决iOS中滚动穿透的问题：
+
+官方处理方法，无法处理 iPhone 手机的问题
+```js
+function onWrapTouchStart(e: React.TouchEvent<HTMLDivElement>) {
+  if (!/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+    return;
+  }
+  const pNode = closest(e.target as Element, `.${prefixCls}-footer`);
+  if (!pNode) {
+    e.preventDefault();
+  }
+}
+```
+
+其他方式
+```js
+// 解决滚动穿透
+const stopMove = (e: TouchEvent) => {
+  e.preventDefault();
+}
+// 打开弹窗的时候 阻止body的默认事件
+document.body.addEventListener('touchmove', stopMove, {passive: false});
+
+// 关闭弹窗的时候，移除之歌事件
+document.body.removeEventListener('touchmove', stopMove);
+```
+
+### Operation
+
+### Prompt
+
+弹窗弹出的时候，可以让输入框自动得到焦点
+
+```tsx
+// 弹出之后，直接使得输入框得到焦点
+const focusInput = (input: HTMLInputElement) => setTimeout(() => input.focus(), 500);
+<input ref={node => focusInput(node as HTMLInputElement)} type="text"/ >
+```
